@@ -144,8 +144,8 @@ export default {
   	})
   	},
   // 使用mounted钩子函数来设置订单栏高度。
- 	mounted:function(){
-    	var orderHeight=document.body.clientHeight;
+ 	  mounted:function(){
+    	  var orderHeight=document.body.clientHeight;
       	document.getElementById("order-list").style.height=orderHeight+'px';
   	},
   	methods:{
