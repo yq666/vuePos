@@ -5,6 +5,10 @@
 ## Build Setup
 
 ``` bash
+git clone https://github.com/yq666/vuePos.git
+
+cd vuePos
+
 # install dependencies
 npm install
 
