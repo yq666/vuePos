@@ -38,7 +38,7 @@
   				<div class="title">常用商品</div>
   				<div class="often-goods-list">
   					<ul>
-  						<li v-for="goods in oftenGoods" @click="addOrderList(goods)">
+  						<li v-for="goods in oftenGoods" :key="goods" @click="addOrderList(goods)">
   							<span>{{goods.goodsName}}</span>
   							<span class="o-price">￥{{goods.price}}元</span>
   						</li>
@@ -50,7 +50,7 @@
   					<el-tab-pane label="汉堡">
   						<div>
   							<ul class="cookList">
-  								<li v-for="typeGood in type0Goods" @click="addOrderList(typeGood)">
+  								<li v-for="typeGood in type0Goods" :key="typeGood" @click="addOrderList(typeGood)">
   									<span class="foodImg"><img :src="typeGood.goodsImg" width="100%"></span>
   									<span class="foodName">{{typeGood.goodsName}}</span>
   									<span class="foodPrice">￥{{typeGood.price}}元</span>
@@ -60,7 +60,7 @@
   					</el-tab-pane>
   					<el-tab-pane label="小食">
   						<ul class="cookList">
-  								<li v-for="typeGood in type1Goods" @click="addOrderList(typeGood)">
+  								<li v-for="typeGood in type1Goods" :key="typeGood" @click="addOrderList(typeGood)">
   									<span class="foodImg"><img :src="typeGood.goodsImg" width="100%"></span>
   									<span class="foodName">{{typeGood.goodsName}}</span>
   									<span class="foodPrice">￥{{typeGood.price}}元</span>
@@ -69,7 +69,7 @@
   					</el-tab-pane>
   					<el-tab-pane label="饮料">
   						<ul class="cookList">
-  								<li v-for="typeGood in type2Goods" @click="addOrderList(typeGood)">
+  								<li v-for="typeGood in type2Goods" :key="typeGood" @click="addOrderList(typeGood)">
   									<span class="foodImg"><img :src="typeGood.goodsImg" width="100%"></span>
   									<span class="foodName">{{typeGood.goodsName}}</span>
   									<span class="foodPrice">￥{{typeGood.price}}元</span>
@@ -78,7 +78,7 @@
   					</el-tab-pane>
   					<el-tab-pane label="套餐">
   						<ul class="cookList">
-  								<li v-for="typeGood in type3Goods" @click="addOrderList(typeGood)">
+  								<li v-for="typeGood in type3Goods" :key="typeGood" @click="addOrderList(typeGood)">
   									<span class="foodImg"><img :src="typeGood.goodsImg" width="100%"></span>
   									<span class="foodName">{{typeGood.goodsName}}</span>
   									<span class="foodPrice">￥{{typeGood.price}}元</span>
@@ -293,8 +293,8 @@ export default {
        padding-top:10px;
    }
    .totalDiv{
-   	background-color: #fff;
-   	padding: 10px;
-   	border-bottom: 1px solid #d3dce6;
+		background-color: #fff;
+		padding: 10px;
+		border-bottom: 1px solid #d3dce6;
    }
 </style>
